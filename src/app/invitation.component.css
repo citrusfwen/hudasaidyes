@@ -175,7 +175,7 @@ footer {
 /* TIMELINE SECTION */
 #timelineSection {
   text-align: center;
-  padding: 2em 1em 0em;
+  padding: 2em 0em 0em 1.1em;
   background-color: var(--pastel-green);  
 
   h1 {
