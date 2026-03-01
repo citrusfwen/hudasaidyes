@@ -1,4 +1,4 @@
-<audio id="weddingSong" autoplay loop>
+<audio id="weddingSong" loop>
   <source
     src="assets/audio/batas_senja.mp3"
     type="audio/mpeg"
@@ -12,8 +12,8 @@
   <span style="font-size: 1.1em">Majlis Perkahwinan</span> <br><br>
   <img src="assets/img/ha_yellow2.png" />
   <br>
-  <span style="font-family: 'The Seasons'; color: var(--pink); font-size: 1.8em">HUDA 
-    <span style="font-family: 'Alice'; color: var(--pink);">&
+  <span style="font-family: 'The Seasons'; color: var(--pink-red); font-size: 1.8em">HUDA 
+    <span style="font-family: 'Alice'; color: var(--pink-red);">&
     </span> ASHRAF</span>  
     <p style="font-size: 1.5em; padding-top: 10px; font-family: 'The Seasons';">
        <span style="font-family: 'Open Sans';">4</span> APRIL 2026
@@ -43,7 +43,7 @@
     Datuk / Dato’ / Datin /Encik / Puan / Cik <br>
     ke Majlis Perkahwinan puteri kami
   </p>
-  <h1 style="color: var(--pink); margin-bottom: 2em;">
+  <h1 style="color: var(--pink-red); margin-bottom: 2em;">
     <br>
     Nurul Huda Hanisah binti Zainal <br>
     <span style="font-family: 'Alice';">&</span> <br>
@@ -71,7 +71,15 @@
 </div>
 <div id="timelineSection">
   <h1>Aturcara Majlis</h1>
-  <img src="assets/img/kerawang.png" style="max-width: 250px; padding: 0px 0px 20px;"/>
+  <!--img src="assets/img/timeline1.png" style="max-width: 250px; padding: 5px 0px 30px; position: relative"/>-->
+  <div id="tlimage">
+    <p style="padding-top: 95px">11:00 am <br> Ketibaan Tetamu</p>
+    <p style="padding: 50px 75px 0px 0px">12:30 pm <br> Perarakan Pengantin</p>
+    <p style="padding: 60px 0px 0px 15px">2:00 pm <br> Sesi Potong Kek</p>
+    <p style="padding: 45px 0px 0px 20px">3:00 pm <br> Sesi Bergambar</p>
+    <p style="padding: 55px 70px 0px 0px">4:00 pm <br> Majlis Bersurai</p>
+  </div>
+  <!--<img src="assets/img/kerawang.png" style="max-width: 250px; padding: 0px 0px 20px;"/>
   <table style="margin: 0 auto; text-align:left; line-height:30px; padding-left: 19px;">
     <tr>
       <td style="text-align: right; padding-right: 15px;">11:00 am</td>
@@ -94,7 +102,7 @@
       <td>Majlis Bersurai</td>
     </tr>
   </table>
-  <img src="assets/img/kerawang2.png" style="max-width: 250px; padding: 35px 0px 20px;"/>
+  <img src="assets/img/kerawang2.png" style="max-width: 250px; padding: 35px 0px 20px;"/>-->
 </div>
 <div id="locationSection">
   <h1>Lokasi</h1>
@@ -178,17 +186,7 @@
           placeholder="Tulis ucapan anda..."
           rows="3"
         ></textarea>
-      </div>
-
-      <!-- Success Message -->
-    <div *ngIf="showSuccess" class="successText">
-      💖 Terima kasih, {{ lastSubmittedName }}! Kami telah menerima RSVP anda.
-    </div>
-
-    <!-- Error Message -->
-    <div *ngIf="showError" class="errorText">
-      Sila isi nama and kehadiran 😊
-    </div>
+      </div>    
 
       <!-- Submit Button -->
       <button
@@ -204,6 +202,17 @@
           <span class="spinner"></span> Menghantar...
         </ng-template>
       </button>
+
+       <!-- Success Message -->
+    <div *ngIf="showSuccess" class="successText">
+      Terima kasih, {{ lastSubmittedName }}! ❤️<br>
+      Kami telah menerima RSVP anda.
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="showError" class="errorText">
+      Sila isi nama and kehadiran 😊
+    </div>
     </form>
 
     

@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectorRef, Component } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
+import { NgZone } from "@angular/core";
 
 @Component({
   selector: "app-header",
@@ -25,38 +26,38 @@ export class InvitationComponent {
   showCopySuccess = false;
   isPlaying = true;
 
-  constructor(private cdr: ChangeDetectorRef) {
-  }
-  
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private zone: NgZone,
+  ) {}
+
   ngOnInit() {
     this.setupCountdown();
   }
 
   ngAfterViewInit() {
+    const audio = document.getElementById("weddingSong") as HTMLAudioElement;
 
-  const audio = document.getElementById(
-    "weddingSong"
-  ) as HTMLAudioElement;
+    audio.volume = 0.5;
 
-  audio.volume = 0.5;
+    const startMusic = () => {
+      console.log("Start music is called");
+      audio
+        .play()
+        .then(() => {
+          this.isPlaying = true;
+        })
+        .catch(() => {
+          this.isPlaying = false;
+        });
+    };
 
-  const startMusic = () => {
-    console.log('Start music is called')
-    audio.play()
-      .then(() => {
-        this.isPlaying = true;
-      })
-      .catch(() => {
-        this.isPlaying = false;
-      });
-  };
+    // iPhone needs touchstart
+    document.addEventListener("touchstart", startMusic, { once: true });
 
-  // iPhone needs touchstart
-  document.addEventListener("touchstart", startMusic, { once: true });
-
-  // desktop fallback
-  document.addEventListener("click", startMusic, { once: true });
-}
+    // desktop fallback
+    document.addEventListener("click", startMusic, { once: true });
+  }
 
   toggleMusic() {
     const audio = document.getElementById("weddingSong") as HTMLAudioElement;
@@ -70,18 +71,18 @@ export class InvitationComponent {
   }
 
   onSubmit(form: NgForm) {
-  this.showError = false;
+    this.showError = false;
 
-  // Check required fields
-  if (!this.rsvp.name || !this.rsvp.attendance) {
-    this.showError = true;
-    setTimeout(() => this.showError = false, 3000);
-    return;
+    // Check required fields
+    if (!this.rsvp.name || !this.rsvp.attendance) {
+      this.showError = true;
+      setTimeout(() => (this.showError = false), 3000);
+      return;
+    }
+
+    // If valid, do the real submit
+    this.submitRSVP();
   }
-
-  // If valid, do the real submit
-  this.submitRSVP();  
-}
 
   setupCountdown() {
     // Set the date we're counting down to
@@ -98,7 +99,7 @@ export class InvitationComponent {
       // Time calculations for days, hours, minutes and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
       );
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -129,9 +130,12 @@ export class InvitationComponent {
     }, 2000);
   }
 
-  submitRSVP() {
+  async submitRSVP() {
+    if (this.isSubmitting) return;
+
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbxVyOXCsZ6iogvkJDMyXdM9FTf__hQobLicdwnEx0eifB7lpKazUAr8vAvMIaXwufQ/exec";
+
     const formData = new FormData();
     formData.append("Name", this.rsvp.name);
     formData.append("Attendance", this.rsvp.attendance);
@@ -141,30 +145,38 @@ export class InvitationComponent {
     this.isSubmitting = true;
     this.showSuccess = false;
 
-    fetch(scriptURL, { method: "POST", body: formData })
-      .then((response) => {
-        if (response.ok) {
-          console.log("Success!", response);
-          this.lastSubmittedName = this.rsvp.name;
-          this.showSuccess = true;
-          this.rsvp = { name: "", attendance: "", message: "", pax: "" };
-          setTimeout(() => (this.showSuccess = false), 5000);
-        } else {
-          console.error("Google script returned error:", response);
-          alert("Something went wrong. Please try again.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error!", error.message);
-        alert("Something went wrong. Please try again.");
-      })
-      .finally(() => {
-        this.isSubmitting = false;
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: formData,
       });
+      const text = await response.text(); // ensure body is read      
+
+      if (response.ok) {
+        console.log("Response:", response, text);
+        this.lastSubmittedName = this.rsvp.name;
+        this.showSuccess = true;
+        this.rsvp = { name: "", attendance: "", message: "", pax: "" };
+        this.isSubmitting = false;
+        setTimeout(() => {
+          this.showSuccess = false;
+          this.cdr.detectChanges();
+        }, 4000);
+      } else {
+        console.error("Google script returned error:", response);
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (e: any) {
+      console.error("Error!", e.message);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      this.isSubmitting = false;
+      this.cdr.detectChanges();
+    }
   }
 
   isFullscreen = false;
-  fullImageSrc = '';
+  fullImageSrc = "";
 
   openFullscreen(src: string) {
     this.fullImageSrc = src;
