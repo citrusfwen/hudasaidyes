@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --base-href '/wedding-invitation/' && npx angular-cli-ghpages --dir=dist/wedding-invitation/browser"
+    "deploy": "ng build --configuration production --base-href '/hudasaidyes/' && npx angular-cli-ghpages --dir=dist/hudasaidyes/browser"
   },
   "private": true,
   "dependencies": {

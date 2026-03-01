@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wedding-invitation": {
+    "hudasaidyes": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wedding-invitation",
+            "outputPath": "dist/hudasaidyes",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/wedding-invitation/"
+            "baseHref": "/hudasaidyes/"
           },
           "configurations": {
             "production": {
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wedding-invitation:build:production"
+              "buildTarget": "hudasaidyes:build:production"
             },
             "development": {
-              "buildTarget": "wedding-invitation:build:development"
+              "buildTarget": "hudasaidyes:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "wedding-invitation:build"
+            "buildTarget": "hudasaidyes:build"
           }
         },
         "test": {
