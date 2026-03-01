@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Gwendolyn:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Gwendolyn:wght@700&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://db.onlinewebfonts.com/c/ca79adee43dfd2eb108269be7a4a7ded?family=Core+Bandi+Face+W01+Regular');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+html {
+  font-family: 'Alice', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: var(--light-green);
+  color: var(--burgundy);
+  text-align: center;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.gwendolyn-regular {
+  font-family: "Gwendolyn", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gwendolyn-bold {
+  font-family: "Gwendolyn", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.delius-regular {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('./assets/fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('./assets/fonts/Fontspring-DEMO-theseasons-bd.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('./assets/fonts/Fontspring-DEMO-theseasons-it.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('./assets/fonts/Fontspring-DEMO-theseasons-bdit.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Jane Austen';
+  src: url('./assets/fonts/JaneAust.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Moontime';
+  src: url('./assets/fonts/MoonTime-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Bandi Face W01 Regular";
+  src: url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.eot");
+  src: url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.svg#Core Bandi Face W01 Regular")format("svg");
+}
+
+@font-face {
+  font-family: "Themysion";
+  src: url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.eot");
+  src: url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.svg#Themysion")format("svg");
+}
+
+.alice-regular {
+  font-family: "Alice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --pastel-green: #f1f2e5;
+  --light-green: #f7f5eb;
+  --dark-green: #6f885c;
+  --burgundy: #5f242e;
+  --lilac: #C8A2C8;
+  --sage: #e1e3cd;
+  --blush: #E9B7B9;
+  --cream: #f8e8d5;
+  --gold: #D4AF37;
+  --text-dark: #3D3D3D;
+  --dusty-purple: #b69aa3;
+  --pink: #e47889;
+  --pink-red: #b73249;
+  --red: #9c2338;
+  --maroon: #9a0100;
+  --yellow: #feda66;
+}
+

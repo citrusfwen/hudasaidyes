@@ -1,0 +1,21 @@
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+tmp/
+out-tsc/
+
+# Angular build cache
+.angular/
+
+# Environment files
+src/environments/*.local.ts
+
+# Logs
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+*.log
+
+# IDE settings

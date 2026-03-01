@@ -1,0 +1,603 @@
+/* GENERAL */
+h1 {
+  font-family: "The Seasons";
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--sage);
+}
+
+p {
+  font-size: 12px;
+}
+
+/* HEADER */
+header {
+  /*background-color: var(--sage);
+  color: var(--cream);*/
+  text-align: center;
+  background-size: cover;
+  padding: 80px 0px;
+  font-size: 12px;
+}
+
+header p {
+  font-family: "Alice", serif;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+header img {
+  width: -webkit-fill-available;
+  max-width: 150px;
+  padding: 20px 0px 40px;
+}
+
+.wedding-header {
+  position: relative;
+  text-align: center;
+  padding: 120px 60px 120px 80px;   /* space inside frame */
+
+  color: var(--dark-green);
+
+  background-image: url("../assets/img/main_frame.png");
+  background-size: contain;   /* keeps whole frame visible */
+  background-repeat: no-repeat;
+  background-position: top;
+
+  min-height: 300px;   /* adjust depending on frame size */
+}
+
+/* Typography */
+.names {
+  font-family: 'The Seasons';
+  color: var(--pink);
+  font-size: 1.6em;
+}
+
+.amp {
+  font-family: 'Alice';
+}
+
+.date {
+  font-size: 16px;
+  padding-top: 10px;
+  font-family: 'The Seasons';
+}
+
+.four {
+  font-family: 'Alice';
+}
+
+/* DATE SECTION */
+#dateSection {
+  text-align: center;  
+  padding: 1.5em 0px 1em;
+  background-color: var(--sage);
+  width: 100%;
+  background-image: url("../assets/img/bg_green1.png");
+  background-size: cover;   /* keeps whole frame visible */
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+
+  img {
+    max-width: 170px;
+  }
+
+  .right {
+    vertical-align: middle;
+  }
+
+  h1 {
+    font-size: 20px; 
+    margin: 0;
+    padding: 10px 0px;
+  }
+
+  .wgm {
+    font-size: 19px; 
+    font-family: 'Moontime';
+  }
+
+  .countdown {
+    font-size: 12px;
+  }
+}
+
+/* INVITATION SECTION */
+#invitationSection {
+  text-align: center;
+  background-color: var(--pastel-green);
+  /*color: var(--cream);*/
+  padding: 1.5em 0em 8.8em;  
+
+  img {
+    max-width: 150px;
+    width: auto;
+  }
+
+  h1 {
+    font-size: 1.1em;
+  }
+}
+
+/* LOCATION SECTION */
+#locationSection {
+  text-align: center;
+  padding: 2.5em 0em 5.5em;
+
+  h1 {
+    line-height: 1em;
+    margin: 0;
+  }
+
+  img {
+    max-width: 250px;
+  }
+
+  p {
+    font-size: 13.5px;
+  }
+}
+
+/* BUTTON */
+button {
+  background-color: var(--dark-green);
+  color: var(--sage);
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Alice", serif;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--sage);
+  color: var(--dark-green)
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--burgundy);
+  color: var(--cream);
+  padding: 2em;
+  font-family: "Jane Austen", cursive;
+  font-size: 1.2em;
+}
+
+/* TIMELINE SECTION */
+#timelineSection {
+  text-align: center;
+  padding: 2em 1em 2em;
+  background-color: var(--pastel-green);
+
+  h1 {
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  img {
+    width: -webkit-fill-available;
+    max-width: 400px;
+  }
+
+  tr {
+    padding-left: 5px;
+  }
+}
+
+/* RSVP SECTION */
+#rsvpSection {
+  text-align: center;
+  padding: 0em 2em 2em 2.4em;
+
+  h1 {
+    line-height: 1em;
+    margin: 0;
+    padding-top: 0.8em;
+  }
+
+  p {
+    margin: 0;
+    padding: 25px 0px 35px;
+    font-size: 15px;
+  }
+
+  select,
+  input,
+  textarea {
+    font-family: "Alice" !important;
+    color: gray !important;
+    background-color: var(--light-green);
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    text-align: center !important;
+    width: 200px;
+    font-size: 0.8em;
+    margin-top: 5px;
+  }
+
+  label {
+    font-size: 0.8em;
+    color: var(--burgundy)
+  }
+
+  .errorText {
+    color: var(--pink-red);
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    font-family: 'Alice';
+  }
+
+  .rsvpForm {
+    height: auto;
+    background-color: #b5b891;
+    margin: 0 auto;
+    border-radius: 20px;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 55px 20px;
+    /*background-image: url("../assets/img/formbg.png");  your transparent PNG */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* or 'cover' if you want it to fill the area */
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    select {
+      width: 220px;
+    }
+
+    #attendanceInput option {
+      text-align: center;
+    }
+
+    .submitButton {
+      background-color: var(--dark-green);
+      color: var(--light-green);
+      font-family: "Alice";
+      width: 130px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .successText {
+      font-size: 0.8em;
+      margin-bottom: 15px;
+      color: var(--sage);
+      font-weight: bold;
+      animation: fadeIn 0.5s ease-in;
+    }
+  }
+}
+
+/* GIFT SECTION */
+#giftSection {
+  text-align: center;
+  padding: 3em 1.8em;
+
+  .giftText {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .copySuccess {
+    color: var(--gold);
+    font-size: 13px;
+    animation: fadeIn 0.5s ease-in;
+    padding-top: 10px;
+  }
+
+  .bankAcc {
+    width: 230px;
+    font-size: 18px;
+
+    img {
+      width: 15px;
+      vertical-align: text-top;
+    }
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  h1 {
+    margin-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+
+  p {
+    font-size: 11.5px;
+    padding-top: 5px;
+    margin: 0;
+  }
+}
+
+/* GALLERY SECTION */
+#gallerySection {
+  text-align: center;
+  display: inline-flex;
+  padding: 0 1em 0 1.5em;
+
+  .left {
+    display: inline-block;
+    padding-top: 18px;
+
+    img {
+      max-width: 150px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+
+  .right {
+    display: inline-block;
+    padding: 0px 0px 25px 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Core Bandi Face W01 Regular";
+
+    .thanks {
+      font-size: 2.6em;
+      line-height: 2em;
+      font-family: "Moontime";
+    }
+
+    .wish {
+      font-size: 1.1em;
+      font-weight: 300;
+    }
+  }
+}
+
+.dear {
+  padding-bottom: 20px; 
+  padding-left: 13px; 
+  font-size: 1.2em;
+}
+
+/* CONTACT SECTION */
+#contactSection {
+  text-align: center;
+  padding: 3.5em 0em 3em;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 14px;
+
+  button {
+    font-size: 1.1em;
+    padding: 8px 10px;
+    background-color: var(--sage);
+    width: 160px;
+    color: var(--burgundy);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--sage);
+  }
+
+  .left {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .right {
+    display: inline-block;
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  h1 {
+    padding-bottom: 1em;
+    margin: 0;
+  }
+}
+
+/* DRESS CODE SECTION */
+#dressCodeSection {
+  text-align: center; 
+  padding: 2.5em 2em 3em;
+
+  img {
+    max-width: 250px;
+    margin-top: -10px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 17px;
+  }
+
+  h1 {
+    margin-bottom: 23px;
+  }
+}
+
+/* SUBMITTING FORM SPINNER */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  margin-right: 5px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+@media (min-width: 600px) {
+
+  h1 {
+    font-size: 2.5em;
+  }
+  header {
+    padding: 0px 0px 60px;
+
+    img {
+      max-width: 450px !important;
+    }
+  }
+
+  #dateSection {
+    padding: 60px 0px;
+
+    img {
+      max-width: 250px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .right {
+      padding-top: 80px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    .countdown {
+      font-size: 15px;
+    }
+
+    .wgm {
+      font-size: 23px;
+    }
+  }
+
+  #gallerySection {
+    .left {
+      padding: 0px 20px 0px 0px;
+
+      img {
+        max-width: 210px;
+      }
+    }
+
+    .right {
+      padding: 40px 0px 140px;
+      width: 300px;
+
+      .dear {
+        font-size: 13px;
+      }
+      .thanks {
+        font-size: 3em;
+      }
+      .wish {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .rsvpForm {
+    background-size: cover;
+  }
+
+  #invitationSection {
+    img {
+      max-width: 450px;
+    }
+  }
+}
+
+/* AUDIO */
+#musicToggleBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  background-color: var(--dusty-purple);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+  z-index: 999;
+  opacity: 0.8;
+}
+
+#musicToggleBtn:hover {
+  background-color: var(--sage);
+  transform: scale(1.05);
+}
+
+/* 🔥 Pulse animation when music is playing */
+#musicToggleBtn.playing {
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 182, 193, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 182, 193, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 182, 193, 0);
+  }
+}
+
+/* IMAGE OVERLAY */
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+svg:hover {
+  fill: var(--dark-green);
+}
