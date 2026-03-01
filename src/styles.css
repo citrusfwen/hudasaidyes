@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
-@import url('https://db.onlinewebfonts.com/c/ca79adee43dfd2eb108269be7a4a7ded?family=Core+Bandi+Face+W01+Regular');
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
 html {
@@ -13,7 +12,8 @@ html {
 
 body {
   width: 100%;
-  margin: 0;
+  max-width: 410px;
+  margin: 0 auto;
   background-color: var(--light-green);
   color: var(--burgundy);
   text-align: center;
@@ -93,40 +93,6 @@ body {
   src: url('./assets/fonts/Fontspring-DEMO-theseasons-bdit.otf') format('opentype');
   font-weight: bold;
   font-style: italic;
-}
-
-@font-face {
-  font-family: 'Jane Austen';
-  src: url('./assets/fonts/JaneAust.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Moontime';
-  src: url('./assets/fonts/MoonTime-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Core Bandi Face W01 Regular";
-  src: url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.eot");
-  src: url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/ca79adee43dfd2eb108269be7a4a7ded.svg#Core Bandi Face W01 Regular")format("svg");
-}
-
-@font-face {
-  font-family: "Themysion";
-  src: url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.eot");
-  src: url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/e71d1c4ccde9bca057cd4d7be7a7ba40.svg#Themysion")format("svg");
 }
 
 .alice-regular {

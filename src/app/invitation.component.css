@@ -1,4 +1,5 @@
 /* GENERAL */
+
 h1 {
   font-family: "The Seasons";
   font-size: 1.5em;
@@ -290,8 +291,9 @@ footer {
     max-width: 400px;
     display: block;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 17px;
+    padding-bottom: 10px;
   }
 
   .copySuccess {
@@ -316,7 +318,6 @@ footer {
   }
 
   h1 {
-    margin-bottom: 15px;
     font-size: 1em;
     line-height: 1.4em;
   }
@@ -461,82 +462,6 @@ footer {
   }
 }
 
-/* RESPONSIVE */
-@media (min-width: 600px) {
-
-  h1 {
-    font-size: 2.5em;
-  }
-  header {
-    padding: 0px 0px 60px;
-
-    img {
-      max-width: 450px !important;
-    }
-  }
-
-  #dateSection {
-    padding: 60px 0px;
-
-    img {
-      max-width: 250px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .right {
-      padding-top: 80px;
-    }
-
-    h1 {
-      font-size: 30px;
-    }
-
-    .countdown {
-      font-size: 15px;
-    }
-
-    .wgm {
-      font-size: 23px;
-    }
-  }
-
-  #gallerySection {
-    .left {
-      padding: 0px 20px 0px 0px;
-
-      img {
-        max-width: 210px;
-      }
-    }
-
-    .right {
-      padding: 40px 0px 140px;
-      width: 300px;
-
-      .dear {
-        font-size: 13px;
-      }
-      .thanks {
-        font-size: 3em;
-      }
-      .wish {
-        font-size: 1.2em;
-      }
-    }
-  }
-
-  .rsvpForm {
-    background-size: cover;
-  }
-
-  #invitationSection {
-    img {
-      max-width: 450px;
-    }
-  }
-}
-
 /* AUDIO */
 #musicToggleBtn {
   position: fixed;
@@ -601,3 +526,12 @@ footer {
 svg:hover {
   fill: var(--dark-green);
 }
+
+/* RESPONSIVE */
+/*@media (min-width: 460px) {
+
+  html body {
+    margin: 0 auto !important;
+    max-width: 450px !important;
+  }
+}*/

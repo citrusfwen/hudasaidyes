@@ -30,6 +30,12 @@ export class InvitationComponent {
   
   ngOnInit() {
     this.setupCountdown();
+
+    setTimeout(() => {
+      const audio = document.getElementById("weddingSong") as any;
+      audio.play();
+      this.isPlaying = true;
+    }, 1000);
   }
 
   ngAfterViewInit() {

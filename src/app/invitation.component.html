@@ -1,15 +1,12 @@
-<!--<audio id="weddingSong">
+<audio id="weddingSong" autoplay loop>
   <source
-    src="assets/audio/tiga.mp3"
+    src="assets/audio/batas_senja.mp3"
     type="audio/mpeg"
   />
 </audio>
 <button (click)="toggleMusic()" id="musicToggleBtn" [class.playing]="isPlaying">
   <img src="assets/img/playpause.png" width="24" height="24" />
 </button>
-<div class="overlay" *ngIf="isFullscreen" (click)="closeFullscreen()">
-  <img [src]="fullImageSrc" alt="Full image" />
-</div>-->
 
 <header class="wedding-header" style="color: var(--dark-green)">
   Majlis Perkahwinan <br><br>
@@ -75,7 +72,6 @@
 <div id="timelineSection">
   <h1>Aturcara Majlis</h1>
   <img src="assets/img/kerawang.png" style="max-width: 250px; padding: 0px 0px 20px;"/>
-  <!--<img src="assets/img/timeline.png" style="margin-left: -25px;" />-->
   <table style="margin: 0 auto; text-align:left; line-height:30px; padding-left: 19px;">
     <tr>
       <td style="text-align: right; padding-right: 15px;">11:00 am</td>
@@ -102,7 +98,6 @@
 </div>
 <div id="locationSection">
   <h1>Lokasi</h1>
-  <!--<img src="assets/img/istac.png" />-->
   <img src="assets/img/bq1.png" style="max-width: 250px; padding-top: 30px; padding-left: 16px;"/>
   <br /><br />
   <p style="line-height: 18px;">
@@ -217,13 +212,11 @@
 </div>
 <div id="giftSection">  
   <h1>Kehadiran serta doa restu anda adalah hadiah yang paling berharga buat kami.</h1>
-  <span class="giftText">
-    Sekiranya ingin memberikan tanda ingatan, sumbangan dalam bentuk wang tunai amat kami hargai.
-  </span>
-  <!--Doa restu dan kehadiran anda sudah cukup bermakna buat kami.
-Namun sekiranya berhasrat untuk memberikan hadiah, sumbangan dalam bentuk wang tunai amat kami hargai dengan penuh kesyukuran.-->
   <br />
-  <img src="assets/img/red_leaf.png" style="width: 170px; padding: 10px 0px 20px;">  
+  <img src="assets/img/red_leaf.png" style="width: 170px; padding: 0px 0px 20px;">  
+  <span class="giftText">
+    Sekiranya ingin memberikan tanda ingatan, sumbangan dalam bentuk wang tunai amat kami hargai dengan penuh kesyukuran.
+  </span>
   <button class="bankAcc" (click)="copyBankAccount()">
     7614843726  <!--<img src="assets/img/copy.png"/>-->
     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e1e3cd"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>
@@ -264,25 +257,4 @@ Namun sekiranya berhasrat untuk memberikan hadiah, sumbangan dalam bentuk wang t
   </div>
   <img src="assets/img/kerawang2.png" style="max-width: 250px; padding: 35px 0px 0px;"/>
 </div>
-<!--<div class="dear">
-    Dear our beloved family & friends,
-  </div>
-<div id="gallerySection">
-  
-<div class="left">
-    <img src="assets/img/gallery.png" style="transform: rotate(-2deg);" (click)="openFullscreen('assets/img/gallery.png')"/>
-  </div>
-  <div class="right">
-    
-    <span class="thanks">Thank You!</span><br />
-    <span class="wish">
-      for being part of our lives and supporting us through our journey.
-      <br /><br />
-      We are so blessed to have you celebrate and be a part of our wedding day.
-      <br /><br />
-      See you!
-    </span>
-  </div>
-</div>-->
-
 <div style="font-size: 12px; padding-bottom: 10px">website by amiradee 🍊</div>
