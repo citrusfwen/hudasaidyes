@@ -30,27 +30,33 @@ export class InvitationComponent {
   
   ngOnInit() {
     this.setupCountdown();
-
-    setTimeout(() => {
-      const audio = document.getElementById("weddingSong") as any;
-      audio.play();
-      this.isPlaying = true;
-    }, 1000);
   }
 
   ngAfterViewInit() {
-    const audio = document.getElementById("weddingSong") as HTMLAudioElement;
-    audio.volume = 0.5;
 
-    audio
-      .play()
+  const audio = document.getElementById(
+    "weddingSong"
+  ) as HTMLAudioElement;
+
+  audio.volume = 0.5;
+
+  const startMusic = () => {
+    console.log('Start music is called')
+    audio.play()
       .then(() => {
         this.isPlaying = true;
       })
       .catch(() => {
-        this.isPlaying = false; // autoplay blocked
+        this.isPlaying = false;
       });
-  }
+  };
+
+  // iPhone needs touchstart
+  document.addEventListener("touchstart", startMusic, { once: true });
+
+  // desktop fallback
+  document.addEventListener("click", startMusic, { once: true });
+}
 
   toggleMusic() {
     const audio = document.getElementById("weddingSong") as HTMLAudioElement;

@@ -2,7 +2,7 @@
 
 h1 {
   font-family: "The Seasons";
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 a {
@@ -100,7 +100,7 @@ header img {
   }
 
   .wgm {
-    font-size: 19px; 
+    font-size: 1.4em; 
     font-family: 'Moontime';
   }
 
@@ -114,7 +114,7 @@ header img {
   text-align: center;
   background-color: var(--pastel-green);
   /*color: var(--cream);*/
-  padding: 1.5em 0em 8.8em;  
+  padding: 1.1em 0em 8em;  
 
   img {
     max-width: 150px;
@@ -122,7 +122,7 @@ header img {
   }
 
   h1 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 
@@ -141,7 +141,7 @@ header img {
   }
 
   p {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 }
 
@@ -207,7 +207,7 @@ footer {
   p {
     margin: 0;
     padding: 25px 0px 35px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   select,
@@ -226,7 +226,7 @@ footer {
   }
 
   label {
-    font-size: 0.8em;
+    font-size: 1em;
     color: var(--burgundy)
   }
 
@@ -291,14 +291,14 @@ footer {
     max-width: 400px;
     display: block;
     margin: 0 auto;
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 15px;
+    line-height: 18px;
     padding-bottom: 10px;
   }
 
   .copySuccess {
     color: var(--gold);
-    font-size: 13px;
+    font-size: 14px;
     animation: fadeIn 0.5s ease-in;
     padding-top: 10px;
   }
@@ -318,12 +318,12 @@ footer {
   }
 
   h1 {
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.4em;
   }
 
   p {
-    font-size: 11.5px;
+    font-size: 12.5x;
     padding-top: 5px;
     margin: 0;
   }
@@ -413,7 +413,7 @@ footer {
 /* DRESS CODE SECTION */
 #dressCodeSection {
   text-align: center; 
-  padding: 2.5em 2em 3em;
+  padding: 2em 2em 3em;
 
   img {
     max-width: 250px;
@@ -423,6 +423,7 @@ footer {
   p {
     margin: 0;
     line-height: 17px;
+    font-size: 16px;
   }
 
   h1 {
@@ -467,7 +468,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 15px;
-  background-color: var(--dusty-purple);
+  background-color: var(--sage);
   border: none;
   border-radius: 50%;
   width: 50px;
