@@ -40,6 +40,7 @@ header img {
   position: relative;
   text-align: center;
   padding: 120px 60px 120px 80px;   /* space inside frame */
+  margin-top: 20px;
 
   color: var(--dark-green);
 

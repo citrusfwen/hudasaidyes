@@ -38,10 +38,9 @@ export class InvitationComponent {
   ngAfterViewInit() {
     const audio = document.getElementById("weddingSong") as HTMLAudioElement;
 
-    audio.volume = 0.5;
+    audio.volume = 0.3;
 
     const startMusic = () => {
-      console.log("Start music is called");
       audio
         .play()
         .then(() => {
@@ -150,7 +149,7 @@ export class InvitationComponent {
         method: "POST",
         body: formData,
       });
-      const text = await response.text(); // ensure body is read      
+      const text = await response.text();     
 
       if (response.ok) {
         console.log("Response:", response, text);
