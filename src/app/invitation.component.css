@@ -160,10 +160,10 @@ button {
   transition: 0.3s ease;
 }
 
-button:hover {
+/*button:hover {
   background-color: var(--sage);
   color: var(--dark-green)
-}
+}*/
 
 /* FOOTER */
 footer {
@@ -229,7 +229,7 @@ footer {
   input,
   textarea {
     font-family: "Alice" !important;
-    color: gray !important;
+    /*color: gray !important;*/
     background-color: var(--light-green);
     border-radius: 8px;
     border: none;

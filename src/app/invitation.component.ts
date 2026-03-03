@@ -60,7 +60,7 @@ export class InvitationComponent {
 
   toggleMusic() {
     const audio = document.getElementById("weddingSong") as HTMLAudioElement;
-    if (audio.paused) {
+    if (this.isPlaying === false) {
       audio.play();
       this.isPlaying = true;
     } else {
