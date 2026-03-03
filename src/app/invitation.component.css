@@ -115,13 +115,7 @@ header img {
 #invitationSection {
   text-align: center;
   background-color: var(--pastel-green);
-  /*color: var(--cream);*/
   padding: 1.1em 0em 8em;  
-
-  img {
-    max-width: 150px;
-    width: auto;
-  }
 
   h1 {
     font-size: 1.4em;
@@ -222,7 +216,7 @@ footer {
   p {
     margin: 0;
     padding: 25px 0px 35px;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   select,
@@ -308,7 +302,7 @@ footer {
     margin: 0 auto;
     font-size: 15px;
     line-height: 18px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   .copySuccess {
